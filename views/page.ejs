@@ -7,29 +7,31 @@
     <title>beepr.</title>
   </head>
   <body>
-    <div class="form-wrapper">
+    <div class="page-wrapper">
       <% if (typeof msg != "undefined" && msg.length > 0) { %>
       <div class="alert">
         <p><%= msg %></p>
       </div>
       <% } %>
-      <form method="POST" action="/page">
-        <label for="code"
-          >Please enter<br />
-          the security code </label
-        ><input
-          type="text"
-          id="code"
-          name="code"
-          required="true"
-          autofocus="autofocus"
-          maxlength="4"
-          autocapitalize="false"
-          autocomplete="false"
-          spellcheck="false"
-        />
-        <button type="submit">Send text</button>
-      </form>
+      <div class="form-wrapper">
+        <form method="POST" action="/page">
+          <label for="code"
+            >Please enter<br />
+            the security code </label
+          ><input
+            type="text"
+            id="code"
+            name="code"
+            required="true"
+            autofocus="autofocus"
+            maxlength="4"
+            autocapitalize="false"
+            autocomplete="false"
+            spellcheck="false"
+          />
+          <button type="submit">Send text</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
