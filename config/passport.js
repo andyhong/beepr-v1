@@ -11,7 +11,8 @@ module.exports = (passport) => {
         tokenURL: "https://api.planningcenteronline.com/oauth/token",
         clientID: process.env.PCO_CLIENT_ID,
         clientSecret: process.env.PCO_CLIENT_SECRET,
-        callbackURL: "http://localhost:3000/auth/callback",
+        callbackURL:
+          "https://afternoon-thicket-33725.herokuapp.com/auth/callback",
       },
       async (accessToken, refreshToken, profile, done) => {
         try {
