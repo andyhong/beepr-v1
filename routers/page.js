@@ -70,6 +70,7 @@ router.post(
             .map((checkin) => {
               return {
                 code: checkin.attributes.security_code,
+                name: checkin.attributes.emergency_contact_name,
                 phone: checkin.attributes.emergency_contact_phone_number,
               }
             })
@@ -91,8 +92,8 @@ router.post(
           ) {
             client.messages
               .create({
-                body: `${user.orgName}: Your child requires your assistance.`,
-                to: `+17149068336`,
+                body: `${user.orgName}: Hi ${emergencyContact[0].name}! Your child needs your attention.`,
+                to: `+${emergencyContact[0].phone}`,
                 from: `+12018347990`,
               })
               .then((success) => {
@@ -102,8 +103,8 @@ router.post(
           } else if (emergencyContact[0].phone.length == 10) {
             client.messages
               .create({
-                body: `${user.orgName}: Your child requires your assistance.`,
-                to: `+17149068336`,
+                body: `${user.orgName}: Hi ${emergencyContact[0].name}! Your child needs your attention.`,
+                to: `+1${emergencyContact[0].phone}`,
                 from: `+12018347990`,
               })
               .then((success) => {
