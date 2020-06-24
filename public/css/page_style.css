@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  background-color: #f4f4f4;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+small,
+hr {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+input {
+  display: block;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 3rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+}
+
+label {
+  font-size: 1.5rem;
+  align-items: center;
+  line-height: 1.2;
+  color: #111111;
+  margin-bottom: 1rem;
+}
+
+input {
+  border: none;
+  border-bottom: 3px solid #1c7ed6;
+  background-color: #f4f4f4;
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.5rem;
+  width: 200px;
+  color: #111111;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: #1c7ed6;
+  border: 3px solid #1c7ed6;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  width: 150px;
+  cursor: pointer;
+}
+
+button:active {
+  outline: none;
+}
+
+.alert {
+  padding: 1rem;
+  background-color: #1c7ed6;
+  width: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.alert > p {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+}

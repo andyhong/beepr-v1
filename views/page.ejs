@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/page_style.css" />
+    <title>beepr.</title>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <% if (typeof msg != "undefined" && msg.length > 0) { %>
+      <div class="alert">
+        <p><%= msg %></p>
+      </div>
+      <% } %>
+      <form method="POST" action="/page">
+        <label for="code"
+          >Please enter<br />
+          the security code </label
+        ><input
+          type="text"
+          id="code"
+          name="code"
+          required="true"
+          autofocus="autofocus"
+          maxlength="4"
+          autocapitalize="false"
+          autocomplete="false"
+          spellcheck="false"
+        />
+        <button type="submit">Send text</button>
+      </form>
+    </div>
+  </body>
+</html>
